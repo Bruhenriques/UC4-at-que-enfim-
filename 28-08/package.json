@@ -1,0 +1,25 @@
+{
+  "name": "uc4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "tsc",
+  "start": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bruhenriques/UC4-at-que-enfim-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bruhenriques/UC4-at-que-enfim-/issues"
+  },
+  "homepage": "https://github.com/Bruhenriques/UC4-at-que-enfim-#readme",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
+}
