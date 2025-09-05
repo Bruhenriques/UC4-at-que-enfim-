@@ -1,3 +1,4 @@
+import { Crocodile } from "./Crocodile";
 import { Dog } from "./Dog";
 
 const myDog:Dog = new Dog("Bob", 10)
@@ -16,3 +17,12 @@ console.log(myOwl.weight)
 
 myOwl.fly(); 
 myOwl.eat();
+
+
+
+const myCrocodile: Crocodile = new Crocodile("angelo", 150)
+console.log(myCrocodile.name)
+console.log(myCrocodile.weight)
+
+myCrocodile.swim();
+myCrocodile.eat();
