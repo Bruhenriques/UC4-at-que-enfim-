@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\sloppy
+
+\title{PROJETO FORTALEZA: Uma Plataforma Web para Monitoramento Ativo de Medidas Protetivas e Prevenção ao Feminicídio no Rio Grande do Sul}
+
+\author{Bruno\inst{1}, Guilherme\inst{1}, Luiza\inst{1}, Leonardo\inst{1}, Roberson\inst{1}}
+
+\address{Curso Técnico em Informática -- Senac São Leopoldo \\ 
+São Leopoldo -- RS -- Brasil
+\email{\{bruno.exemplo,guilherme.exemplo,luiza.exemplo,leonardo.exemplo,roberson.exemplo\}@senac.edu.br}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Violence against women is one of Brazil’s most severe social problems, with femicide as its most tragic expression. In Rio Grande do Sul, despite protective laws such as the Maria da Penha Law, rates remain alarming. Enforcement of protective measures is often reactive, leading to recidivism and fatalities. This paper presents the Fortaleza Project, a Progressive Web App (PWA) that performs active monitoring of the distance between victim and aggressor. Using dynamic geofencing and real-time alerts, the system notifies the victim, support network, and authorities in case of violation. The goal is to reduce systemic failures, optimize police response, and ultimately save lives.
+\end{abstract}
+
+\begin{resumo}
+A violência contra a mulher é um dos mais graves problemas sociais do Brasil, tendo o feminicídio como sua expressão mais extrema. No Rio Grande do Sul, mesmo com a Lei Maria da Penha e a emissão de medidas protetivas de urgência, os índices permanecem alarmantes. A fiscalização do cumprimento dessas medidas é predominantemente reativa, permitindo reincidência e resultando em tragédias. Este artigo apresenta o Projeto Fortaleza, uma plataforma web em formato de Progressive Web App (PWA) para monitoramento ativo da distância entre vítima e agressor. O sistema utiliza geofencing dinâmico e envio automático de alertas para vítima, rede de apoio e autoridades policiais em caso de violação. A proposta busca reduzir falhas sistêmicas, otimizar a resposta policial e ampliar a proteção às mulheres em situação de risco.
+\end{resumo}
+
+\section{Introdução}
+A violência doméstica e familiar contra a mulher representa uma grave violação de direitos humanos. A Lei nº 11.340/2006 (Lei Maria da Penha) criou mecanismos para combater esse fenômeno, incluindo medidas protetivas de urgência que determinam o afastamento do agressor. Contudo, a eficácia dessas medidas depende de monitoramento adequado, algo ainda limitado no Brasil. Dados da Secretaria da Segurança Pública do RS mostram que muitas vítimas de feminicídio já haviam solicitado medidas protetivas, revelando falhas na fiscalização.
+
+Neste cenário, o \textbf{Projeto Fortaleza} surge como uma solução tecnológica para transformar a fiscalização passiva em proteção proativa, por meio do monitoramento em tempo real da distância entre vítima e agressor.
+
+\section{Contexto da Violência no RS}
+Apesar de esforços institucionais, o Rio Grande do Sul mantém índices elevados de feminicídio. Relatórios da SSP/RS (2024) indicam que, em grande parte dos casos, havia histórico de denúncias e medidas protetivas em vigor.
+
+Dois pontos se destacam: (1) alto volume de ocorrências de ameaça e lesão corporal, que muitas vezes antecedem o feminicídio; (2) ineficácia da medida protetiva isolada, já que sua aplicação depende da capacidade de fiscalização do Estado. O Projeto Fortaleza busca atuar justamente nesta lacuna.
+
+\section{Solução Proposta: O Projeto Fortaleza}
+O Fortaleza é um \textit{Progressive Web App} que pode ser instalado em qualquer smartphone, sem necessidade de lojas de aplicativos. Seu funcionamento baseia-se em quatro etapas:
+
+\begin{enumerate}
+    \item \textbf{Cadastro}: Autoridades inserem os dados da vítima, do agressor e a distância mínima estipulada;
+    \item \textbf{Monitoramento}: O sistema utiliza o GPS do dispositivo da vítima, enquanto a posição do agressor é obtida preferencialmente por tornozeleira eletrônica;
+    \item \textbf{Geofencing Dinâmico}: O sistema gera uma cerca virtual ao redor da vítima, atualizada em tempo real;
+    \item \textbf{Alerta Multicanal}: Em caso de violação do perímetro, são enviados alertas instantâneos via notificação push, SMS e e-mail para vítima, rede de apoio e órgãos policiais.
+\end{enumerate}
+
+Além disso, os registros podem ser armazenados como evidência em processos judiciais.
+
+\section{Aspectos Técnicos}
+A arquitetura segue o modelo cliente-servidor, com \textit{backend} em nuvem, APIs RESTful para integração e banco de dados seguro. Os dados sensíveis são criptografados em trânsito (HTTPS/TLS) e em repouso. O GPS é atualizado em intervalos otimizados para reduzir consumo de bateria. Por ser PWA, o sistema garante escalabilidade e atualização contínua sem depender de lojas de aplicativos.
+
+\section{Limitações e Desafios}
+Entre os principais desafios estão: (i) dependência de infraestrutura pública, especialmente da tornozeleira eletrônica; (ii) falhas de geolocalização em áreas sem cobertura GPS; (iii) privacidade e segurança da vítima, exigindo rígidas políticas de proteção de dados; (iv) necessidade de adesão institucional (polícia, Ministério Público, Judiciário).
+
+\section{Conclusão}
+O Projeto Fortaleza representa uma proposta de inovação tecnológica para reduzir a vulnerabilidade das mulheres sob medida protetiva. Ao transformar o monitoramento reativo em ativo, a solução tem potencial para prevenir reincidências e salvar vidas. Trabalhos futuros incluirão a construção de um protótipo funcional e a realização de testes em cenários simulados.
+
+\begin{thebibliography}{99}
+
+\bibitem{lei}
+BRASIL. Lei nº 11.340, de 7 de agosto de 2006. Diário Oficial da União, Brasília, DF, 2006.
+
+\bibitem{forum}
+FÓRUM BRASILEIRO DE SEGURANÇA PÚBLICA. Anuário Brasileiro de Segurança Pública 2024. Disponível em: \url{https://forumseguranca.org.br}.
+
+\bibitem{ssp}
+SECRETARIA DA SEGURANÇA PÚBLICA DO RS. Indicadores de Violência Contra a Mulher, 2024. Disponível em: \url{https://ssp.rs.gov.br}.
+
+\bibitem{martins}
+Martins, R.; Soares, F. (2022). Aplicações de geofencing para segurança pública. Anais do SBRC.
+
+\bibitem{oliveira}
+Oliveira, L. et al. (2023). Progressive Web Apps como solução multiplataforma em contextos críticos. Anais do WebMedia.
+
+\end{thebibliography}
+
+\end{document}
