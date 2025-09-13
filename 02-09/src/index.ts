@@ -25,6 +25,8 @@ function createTsProject(): void {
   // Executa npm init dentro da pasta criada
   execSync("npm init -y", { stdio: "inherit", cwd: projectPath });
 
+  execSync("npm install typescript", { stdio: "inherit" });
+
   // Cria o tsconfig.json com as configurações desejadas
   const tsConfig: TsConfig = {
     compilerOptions: {
